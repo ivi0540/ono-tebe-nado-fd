@@ -49,19 +49,131 @@
 
 .header__contact-info {
   justify-self: end;
+
+  margin-right: 37px;
   color: #000;
   font-family: Raleway;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
   line-height: 24.3px;
-
-  margin-right: 37px;
 }
 
 .header__contact-phone,
 .header__contact-email {
-  white-space: nowrap;
   text-decoration: underline;
   text-underline-offset: 4px;
+  white-space: nowrap;
+}
+
+/* cover styles */
+
+.cover {
+  position: relative;
+  padding-top: 165px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cover__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.cover__title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 115%;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+}
+
+.cover__title-line {
+  display: block;
+}
+
+.cover__title-line:nth-child(2) {
+  margin-right: -30px;
+  text-align: center;
+}
+
+.cover__title-line:nth-child(3) {
+  margin-right: -30px;
+  text-align: right;
+}
+
+.cover_description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 106px;
+}
+
+.cover__description-text {
+  color: #fff;
+  font-weight: 400;
+  font-size: 22px;
+  font-style: normal;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.cover__description_text-group {
+  display: flex;
+}
+
+.cover__description-text {
+  display: block;
+}
+
+.cover__description-text:nth-child(2) {
+  margin-left: 25px;
+}
+
+.cover__description-text:nth-child(3) {
+  margin-left: 23px;
+}
+
+.cover__description-text:nth-child(4) {
+  margin-left: 25px;
+}
+
+.cover__description-text:nth-child(5) {
+  margin-left: 24px;
+}
+
+.cover__description-text:nth-child(6) {
+  margin-left: 24px;
+}
+
+.cover__description-text:nth-child(7) {
+  margin-left: 24px;
+}
+
+.cover__description_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 256px;
+  height: 51px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 400;
+  font-size: 22px;
+  text-align: center;
+  text-transform: uppercase;
 }
