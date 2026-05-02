@@ -85,7 +85,7 @@
   background-size: cover;
 }
 
-.lots__overlay {
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -169,7 +169,7 @@
   margin-left: 24px;
 }
 
-.cover__description_button {
+.cover__bet-button {
   display: flex;
   justify-content: center;
   align-items: center;
