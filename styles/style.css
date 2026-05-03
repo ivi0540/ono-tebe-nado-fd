@@ -130,6 +130,7 @@
 }
 
 .cover__description-text {
+  display: block;
   color: #fff;
   font-weight: 400;
   font-size: 22px;
@@ -140,10 +141,6 @@
 
 .cover__description_text-group {
   display: flex;
-}
-
-.cover__description-text {
-  display: block;
 }
 
 .cover__description-text:nth-child(2) {
@@ -244,7 +241,6 @@
 }
 
 .card-link {
-  display: block;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
