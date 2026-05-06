@@ -123,6 +123,10 @@
   text-transform: uppercase;
 }
 
+.cover__title-line{
+  display: block;
+}
+
 .cover__title-line_center {
   margin-right: -30px;
   text-align: center;
