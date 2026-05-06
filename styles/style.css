@@ -1,3 +1,9 @@
+.header,
+.main,
+.footer {
+  background-color: #fff;
+}
+
 /* header style */
 
 .header {
@@ -25,23 +31,30 @@
   gap: 29px;
 }
 
-.header__links-list-item {
+.header__link {
   text-decoration: underline;
   text-underline-offset: 4px;
-  list-style-type: circle;
-  white-space: nowrap;
 }
 
-.header__links-list-item:nth-child(1) {
+.header__link--active {
+  text-decoration: none;
+}
+
+.header__links-list-item {
+  text-underline-offset: 4px;
+  list-style-type: circle;
+}
+
+.header__links-list-item--home {
   text-decoration: none;
   list-style-type: none;
 }
 
-.header__links-list-item:nth-child(2) {
+.header__links-list-item--lots {
   padding-left: 3px;
 }
 
-.header__links-list-item:nth-child(3) {
+.header__links-list-item--about {
   padding-left: 5px;
 }
 
@@ -50,12 +63,11 @@
   justify-self: center;
   width: 135px;
   height: 105px;
-  /* margin-left: 44px; */
 }
 
-.header__contact-info {
-  justify-self: end;
-  padding-right: 35px;
+.address-block {
+  display: flex;
+  flex-direction: column;
   color: #000;
   font-weight: 400;
   font-size: 18px;
@@ -63,11 +75,14 @@
   line-height: 24.3px;
 }
 
-.header__contact-phone,
-.header__contact-email {
+.address-block--header {
+  justify-self: end;
+  padding-right: 35px;
+}
+
+.address-block__link {
   text-decoration: underline;
   text-underline-offset: 4px;
-  white-space: nowrap;
 }
 
 /* cover styles */
@@ -86,8 +101,7 @@
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -96,7 +110,6 @@
 }
 
 .cover__title {
-
   position: relative;
   z-index: 2;
   display: flex;
@@ -110,16 +123,12 @@
   text-transform: uppercase;
 }
 
-.cover__title-line {
-  display: block;
-}
-
-.cover__title-line:nth-child(2) {
+.cover__title-line_center {
   margin-right: -30px;
   text-align: center;
 }
 
-.cover__title-line:nth-child(3) {
+.cover__title-line_right {
   text-align: right;
 }
 
@@ -128,13 +137,12 @@
 }
 
 .cover_description {
-
   position: relative;
   z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 106px;
+  margin-top: 87px;
 }
 
 .cover__description-text {
@@ -145,34 +153,7 @@
   font-style: normal;
   line-height: 28px;
   text-transform: uppercase;
-}
-
-.cover__description_text-group {
-  display: flex;
-}
-
-.cover__description-text:nth-child(2) {
-  margin-left: 25px;
-}
-
-.cover__description-text:nth-child(3) {
-  margin-left: 23px;
-}
-
-.cover__description-text:nth-child(4) {
-  margin-left: 25px;
-}
-
-.cover__description-text:nth-child(5) {
-  margin-left: 24px;
-}
-
-.cover__description-text:nth-child(6) {
-  margin-left: 24px;
-}
-
-.cover__description-text:nth-child(7) {
-  margin-left: 24px;
+  word-spacing: 24px;
 }
 
 .cover__bet-button {
@@ -187,12 +168,13 @@
   font-size: 22px;
   text-align: center;
   text-transform: uppercase;
+  background: none;
+  cursor: pointer;
 }
 
 .cover__bet-button:hover {
   color: black;
   background-color: #fff;
-  cursor: pointer;
 }
 
 /* lots styles */
@@ -225,22 +207,22 @@
 .lots__card {
   position: relative;
   width: 334px;
-  height: 596px;
+  min-height: 596px;
   padding: 48px 40px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.lots__card:nth-child(1) {
+.lots__card--film {
   background-image: url("../images/card-lot-01.jpg");
 }
 
-.lots__card:nth-child(2) {
+.lots__card--book {
   background-image: url("../images/card-lot-02.jpg");
 }
 
-.lots__card:nth-child(3) {
+.lots__card--painting {
   background-image: url("../images/card-lot-03.jpg");
 }
 
@@ -249,7 +231,6 @@
 }
 
 .card-link {
-
   position: relative;
   z-index: 2;
   display: flex;
@@ -277,6 +258,7 @@
 }
 
 .lots__look-more-link {
+  width: fit-content;
   margin-top: 30px;
   margin-left: 40px;
   color: #000;
@@ -337,11 +319,6 @@
   line-height: 24px;
 }
 
-.pre-like {
-  display: inline;
-  white-space: pre;
-}
-
 /* footer styles */
 
 .footer {
@@ -387,10 +364,4 @@
 .footer__social-icon {
   width: 48px;
   height: 48px;
-}
-
-.header,
-.main,
-.footer {
-  background-color: #fff;
 }
