@@ -85,6 +85,10 @@
   text-underline-offset: 4px;
 }
 
+.address-block__link--no-line {
+  text-decoration: none;
+}
+
 /* cover styles */
 
 .cover {
@@ -157,7 +161,7 @@
   font-style: normal;
   line-height: 28px;
   text-transform: uppercase;
-  word-spacing: 24px;
+  word-spacing: 18.5px;
 }
 
 .cover__bet-button {
